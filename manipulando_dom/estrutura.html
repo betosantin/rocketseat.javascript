@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Curso javascript
+    </title>
+</head>
+
+<body>
+
+    <div id="app">
+        <button onclick="mostraAlerta('Botão foi clicado')"
+            onmouseover="mostraAlerta('Passou o mouse no botão')">Botão</button>
+        
+        <input onkeypress="mostraAlerta('teclou...')"></input>
+    </div>
+
+    <script>
+        function mostraAlerta(alerta) {
+            alert(alerta);
+        }
+    </script>
+</body>
+
+</html>

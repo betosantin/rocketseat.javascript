@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Curso javascript
+    </title>
+</head>
+
+<body>
+
+    <div id="app">
+        
+        <input type="text" name="nome" id="nome"></input>
+        <input type="text" name="nome2" id="nome"></input>
+        <button class="botao">Botão</button>
+        
+    </div>
+
+    <script>
+        var inputElement = document.getElementById('nome');
+
+        console.log(inputElement);
+
+        inputElement = document.getElementsByTagName('input')
+        
+        console.log(inputElement);
+
+        inputElement = document.getElementsByClassName('botao')
+
+        console.log(inputElement);
+
+        //Monta uma query de busca via atributo que consta na dom
+        //especificando em qual parte da dom
+        //Retornando assim os input que estão dentro do body e abaixo da div com id=app
+        //Retorna o primeiro elemento que encontrou
+        inputElement = document.querySelector('body div#app input')
+        
+        console.log(inputElement);
+        
+        //Retorna os inputs que tem atributo name=nome
+         //Retorna o primeiro elemento que encontrou
+        inputElement = document.querySelector('input[name=nome]')
+        
+        console.log(inputElement);
+
+         //Retorna n elementos
+         inputElement = document.querySelectorAll('input')
+        
+        console.log(inputElement);
+        
+        inputElement = document.querySelector('input[name=nome]');
+        var btnElement = document.querySelector('button.botao')
+        btnElement.onclick = function(){
+            alert(inputElement.value);
+        }
+        console.log(inputElement);
+    </script>
+</body>
+
+</html>
